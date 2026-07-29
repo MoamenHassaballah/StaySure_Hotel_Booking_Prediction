@@ -6,7 +6,7 @@ import datetime
 # --- 1. Load the Saved Artifacts ---
 @st.cache_resource
 def load_artifacts():
-    model = joblib.load('hotel_model.pkl')
+    model = joblib.load('hotel_model.pkl.gz')
     columns = joblib.load('model_columns.pkl')
     encoders = joblib.load('label_encoders.pkl')
     return model, columns, encoders
